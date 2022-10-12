@@ -1,0 +1,29 @@
+<!-- CSS SELECTORS -->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <title>Week 2</title>
+    <style>
+      .child-combinator-selector {
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+      .child-combinator-selector + p {
+        background-color: red;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <!-- Child combinator selector -->
+  <div class="child-combinator-selector">
+    <p>I am the immediate child of the wrapper</p>
+    <p>grand child</p>
+    <p>another grand child</p>
+  </div>
+</html>

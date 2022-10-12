@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <title>Week 2</title>
+    <style>
+      /* General sibling combinator */
+      .general-sibling-selector {
+        padding: 20px;
+        background-color: #f0f0f0;
+        margin-bottom: 20px;
+      }
+      h1 ~ div{
+        background-color: red;
+        border: 5px dotted black;
+        padding: 20px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <!-- General Sibling Combinator-css selector: -->
+  <!-- General sibling combinator is used to target all the siblings -->
+  <body>
+  <div class="general-sibling-selector">
+    <div class="red">
+      <p>Red</p>
+    </div>
+    <h1>Heading 1</h1>
+    <div class="green">
+      <p>Green</p>
+    </div>
+    <div class="blue">
+      <p>Blue</p>
+    </div>
+    <div class="yellow">
+      <p>Yellow</p>
+    </div>
+  </div>
+  <div class="general-sibling-selector">
+    <p>Paragraph 1</p>
+    <h1>My heading</h1>
+    <!-- We can target all the paragraph that are siblings to h1 -->
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <p>Paragraph 4</p>
+  </div>
+  </body>
+</html>
