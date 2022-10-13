@@ -1,0 +1,25 @@
+Override The Default Display Value
+Every element has a default display value. However, you can override this.
+
+Changing an inline element to a block element, or vice versa, can be useful for making the page look a 
+specific way, and still follow the web standards.
+
+A common example is making inline <li> elements for horizontal menus:
+
+li {
+  display: inline;
+}
+
+
+
+The display: inline-block Value
+Compared to display: inline, the major difference is that display: 
+inline-block allows to set a width and height on the element.
+
+Also, with display: inline-block, the top and bottom margins/paddings 
+are respected, but with display: inline they are not.
+
+Compared to display: block, the major difference is that display: inline-block does 
+not add a line-break after the element, so the element can sit next to other elements.
+
+The following example shows the different behavior of display: inline, display: inline-block and display: block:

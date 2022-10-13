@@ -1,0 +1,23 @@
+
+Flexbox is a one-dimensional layout model, meaning it can arrange elements 
+in either a row or a column, not both. If you want to arrange elements in both 
+rows and columns, you should use CSS Grid. 
+
+
+ Properties of flex container
+display ( flex or inline-flex )
+flex-direction: row, row-reverse, column, column-reverse
+flex-wrap: nowrap, wrap, wrap-reverse
+flex-flow: shorthand for flex-direction and flex-wrap
+justify-content: flex-start, flex-end, center, space-between, space-around, space-evenly
+align-items: flex-start, flex-end, center, baseline, stretch
+align-content: flex-start, flex-end, center, space-between, space-around, stretch
+
+
+Properties of flex items ( child of container)
+order: integer
+flex-grow: integer
+flex-shrink: integer
+flex-basic: auto, length, percentage
+flex: shorthand for flex-grow, flex-shrink, flex-basic
+align-self: auto, flex-start, flex-end, center, baseline, stretch
