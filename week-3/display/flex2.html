@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>flex</title>
+    <style>
+      .grid {
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        border: 2px solid red;
+        padding: 20px;
+        margin-top: 10px;
+      }
+      .grid  div {
+        border: 1px solid black;
+        padding: 10px;
+      }
+      
+      @media screen and (max-width: 768px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .flex{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        border: 2px solid red;
+        padding: 20px;
+        margin-top: 10px;
+        gap: 10px;
+      }
+      .flex div{
+        border: 1px solid black;
+        padding: 10px;
+       
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div>Column 1</div>
+      <div>Column 2</div>
+      <div>Column 3</div>
+      <div>Column 4</div>
+      <div>Column 5</div>
+      <div>Column 6</div>
+      <div>Column 7</div>
+      <div>Column 8</div>
+    </div>
+
+    <div class="flex">
+      <div>Column 1</div>
+      <div>Column 2</div>
+      <div>Column 3</div>
+      <div>Column 4</div>
+      <div>Column 5</div>
+      <div>Column 6</div>
+      <div>Column 7</div>
+      <div>Column 8</div>
+    </div>
+  </body>
+</html>

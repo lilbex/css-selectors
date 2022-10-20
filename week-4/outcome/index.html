@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>form validation</title>
+    <style>
+      body {
+        background: #ff7979;
+        background: -webkit-linear-gradient(to right, #ff7979, #ffd194);
+        background: linear-gradient(to right, #ff7979, #ffd194);
+        font-family: "Poppins";
+      }
+      .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+      .row {
+        width: 45%;
+      }
+      form {
+        padding: 20px;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+      input {
+        border: 1px solid #5e54a4;
+        border-radius: 5px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 35px;
+        letter-spacing: 0.25px;
+        padding: 5px 19px;
+        color: #3d3b48;
+      }
+      /* input:not([type="submit"]) {
+       position: relative;
+      } */
+      .form-group {
+        position: relative;
+      }
+      .form-group > div {
+        color: red;
+      }
+      img {
+        position: absolute;
+        right: 10px;
+        top: 25%;
+        width: 20px;
+        display: none;
+      }
+      input[type="submit"] {
+        background: #38cc8b;
+        box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+        color: #fff;
+        cursor: pointer;
+      }
+      ::-webkit-input-placeholder {
+        /* Edge */
+        color: rgb(188, 178, 178);
+        font-weight: 400;
+      }
+
+      :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: rgb(188, 178, 178);
+        font-weight: 400;
+      }
+
+      ::placeholder {
+        color: rgb(188, 178, 178);
+        font-weight: 400;
+      }
+      .left-container h2 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 55px;
+        letter-spacing: -0.520833px;
+        color: #ffffff;
+      }
+      .left-container p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        color: #ffffff;
+      }
+      .right-container p {
+        background: #5e54a4;
+        box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+        border-radius: 10px;
+        height: 40px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 26px;
+        text-align: center;
+        letter-spacing: 0.267857px;
+        padding-top: 15px;
+
+        color: #ffffff;
+      }
+
+      @media screen and (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .row {
+          width: 95%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="left-container">
+          <h2>Learn to code by watching others</h2>
+          <p>
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+          <p class="form-value"></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="right-container">
+          <p>Try it free 7 days then $20/mo. thereafter</p>
+          <form action="index.html" method="post">
+            <div class="form-group">
+              <input
+                placeholder="First Name"
+                type="text"
+                name="firstname"
+                value=""
+                autocomplete="off"
+              />
+              <img class="firstNameImage" src="icon-error.svg" alt="" />
+              <div class="firstnameError"></div>
+            </div>
+            <div class="form-group">
+              <input
+                placeholder="Last Name"
+                type="text"
+                name="lastname"
+                value=""
+                autocomplete="off"
+              />
+              <img class="lastNameImage" src="icon-error.svg" alt="" />
+              <div class="lastnameError"></div>
+            </div>
+            <div class="form-group">
+              <input
+                placeholder="Email: eg example@gmail.com"
+                type="email"
+                name="email"
+                value=""
+                autocomplete="off"
+              />
+              <img class="emailImage" src="icon-error.svg" alt="" />
+              <div class="emailError"></div>
+            </div>
+            <div class="form-group">
+              <input
+                placeholder="Password"
+                type="password"
+                name="password"
+                value=""
+                autocomplete="off"
+              />
+              <img class="passwordImage" src="icon-error.svg" alt="" />
+              <div class="passwordError"></div>
+            </div>
+            <div class="form-group">
+              <input type="submit" name="submit" value="Submit" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const form = document.querySelector("form");
+
+      // target all the input fields
+      const firstname = document.querySelector("input[name='firstname']");
+      const lastname = document.querySelector("input[name='lastname']");
+      const email = document.querySelector("input[name='email']");
+      const password = document.querySelector("input[name='password']");
+      const submit = document.querySelector("input[type='submit']");
+
+      // target all the error messages
+      const firstnameError = document.querySelector(".firstnameError");
+      const lastnameError = document.querySelector(".lastnameError");
+      const emailError = document.querySelector(".emailError");
+      const passwordError = document.querySelector(".passwordError");
+
+      // target all the error images
+      const firstNameImage = document.querySelector(".firstNameImage");
+      const lastNameImage = document.querySelector(".lastNameImage");
+      const emailImage = document.querySelector(".emailImage");
+      const passwordImage = document.querySelector(".passwordImage");
+
+      // email regular expression
+      const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+      const formValue = document.querySelector(".form-value");
+
+      // function to validate the form
+      const onchange = () => {
+        if (firstname.value === "") {
+          firstnameError.innerText = "First name cannot be empty";
+          firstNameImage.style.display = "block";
+        } else if (firstname.value.length < 2) {
+          firstnameError.innerText = "First name must be at least 2 characters";
+          firstNameImage.style.display = "block";
+        } else {
+          firstnameError.innerText = "";
+          firstNameImage.style.display = "none";
+        }
+        if (lastname.value === "") {
+          lastnameError.innerText = "Last name cannot be empty";
+          lastNameImage.style.display = "block";
+        } else if (lastname.value.length < 2) {
+          lastnameError.innerText = "Last name must be at least 2 characters";
+          lastNameImage.style.display = "block";
+        } else {
+          lastnameError.innerText = "";
+          lastNameImage.style.display = "none";
+        }
+        if (email.value === "") {
+          emailError.innerText = "Email cannot be empty";
+          emailImage.style.display = "block";
+        } else if (!email.value.includes("@")) {
+          emailError.innerText = "Looks like this is not an email";
+          emailImage.style.display = "block";
+        } else if (!emailRegex.test(email.value)) {
+          emailError.innerText = "Looks like this is not an email";
+          emailImage.style.display = "block";
+        } else {
+          emailError.innerText = "";
+          emailImage.style.display = "none";
+        }
+        if (password.value === "") {
+          passwordError.innerText = "Password cannot be empty";
+          passwordImage.style.display = "block";
+        } else if (password.value.length < 8) {
+          passwordError.innerText = "Password must be at least 8 characters";
+          passwordImage.style.display = "block";
+        } else {
+          passwordError.innerText = "";
+          passwordImage.style.display = "none";
+        }
+        if (
+          firstnameError.innerText === "" &&
+          lastnameError.innerText === "" &&
+          emailError.innerText === "" &&
+          passwordError.innerText === ""
+        ) {
+          formValue.innerText = `First Name: ${firstname.value}
+        Last Name: ${lastname.value}
+        Email: ${email.value}
+        Password: ${password.value}`;
+        // clear all the form fields
+          firstname.value = "";
+          lastname.value = "";
+          email.value = "";
+          password.value = "";
+        }
+      };
+
+      submit.addEventListener("click", (e) => {
+        e.preventDefault();
+        onchange();
+      });
+    </script>
+  </body>
+</html>
