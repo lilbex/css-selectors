@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="newDiv"></div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+        </tr>
+    </table>
+<script src="./object-tut.js"></script>
+
+<script>
+    const student = [
+        {name: 'John', age: 20, grade:"A"},
+        {name: 'Jill', age: 30, grade: "B"},
+        {name: 'Peter', age: 40, grade: "C"},
+    ]
+
+    // display students in a table
+    student.map((s)=>{
+        const tr = document.createElement('tr')
+        const tdName = document.createElement('td')
+        const tdAge = document.createElement('td')
+        const tdGrade = document.createElement('td')
+
+        tdName.innerHTML = s.name
+        tdAge.innerHTML = s.age
+        tdGrade.innerHTML = s.grade
+
+        tr.appendChild(tdName)
+        tr.appendChild(tdAge)
+        tr.appendChild(tdGrade)
+        document.querySelector('table').appendChild(tr)
+    })
+
+    const createDiv = document.createElement('div')
+    const createP = document.createElement('p')
+    createP.innerHTML = 'Hello World'
+
+    const nnnn =createDiv.appendChild(createP)
+
+    document.querySelector('.newDiv').appendChild(nnnn)
+
+
+</script>
+</body>
+</html>
+<!-- https://github.com/lilbex/css-selectors.git -->
