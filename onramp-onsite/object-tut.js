@@ -41,8 +41,14 @@ const students = [
     age: 30,
   },
 ];
-// map through the students array and 
+// map through the students array and
 // return a new array of just the first names
 const firstNames = students.map((s) => s.firstName);
 console.log(firstNames);
 
+// Given an array of numbers and strings
+// return a number which is a sum of all the numbers in
+// the array.  If there are no numbers, return 0
+
+const arr = [1, 2, 3, "4", "5", 1, "men", "8", "9", 4];
+function addNumbers() {}
