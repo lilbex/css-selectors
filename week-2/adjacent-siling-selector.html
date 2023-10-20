@@ -1,83 +1,25 @@
 <!-- CSS SELECTORS -->
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    />
-    <title>Week 2</title>
-    <style>
-      .adjacent-sibling-selector {
-        padding: 20px;
-        background-color: #f0f0f0;
-        margin-bottom: 20px;
-      }
-      .red{
-        background-color: red;
-        padding: 5px;
-      }
-      .green{
-        background-color: green;
-        padding: 5px;
-      }
-      .blue{
-        background-color: blue;
-        padding: 5px;
-      }
-      .yellow{
-        background-color: yellow;
-        padding: 5px;
-      }
-      .purple{
-       
-        padding: 10px;
-        color: white;
-      }
-      h1 + div{
-        border: 5px dotted black;
-      }
-      h1 + p + p{
-        background-color: red;
-        padding: 20px;
-      }
-      .red + h1{
-        background-color: red;
-        padding: 8px;
-        border: 5px dashed black;
-      }
-      .blue ~ .purple {
-        background-color: purple;
-      }
-    </style>
-  </head>
-  <!-- djacent Sibling Combinator-css selector: -->
-  <div class="adjacent-sibling-selector">
-    <div class="red">
-      <p>Red</p>
-    </div>
-    <h1>Heading 1</h1>
-    <div class="green">
-      <p>Green</p>
-    </div>
-    <div class="blue">
-      <p>Blue</p>
-    </div>
-    <div class="yellow">
-      <p>Yello</p>
-    </div>
-    <div class="purple">
-      <p>purple</p>
-    </div>
-  </div>
 
-  <div class="adjacent-sibling-selector">
-    <p>Paragraph 1</p>
-    <h1>My heading</h1>
-    <p>Paragraph 2</p>
-    <p>Paragraph 3</p>
-    <p>Paragraph 4</p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Week 2</title>
+  <style>
+    .adjacent-sibling + p {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <p>Adjacent color</p>
+  <div class="adjacent-sibling">
+    <p>Adjacent color</p>
   </div>
+  <p>Adjacent color</p>
+  <p>Adjacent color</p>
+</body>
+
 </html>

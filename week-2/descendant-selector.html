@@ -1,42 +1,74 @@
 <!-- CSS SELECTORS -->
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    />
-    <title>Week 2</title>
-    <style>
-      /* Descendant selector */
-      .descendant-selector {
-        background-color: #f0f0f0;
-        padding: 20px;
-      }
-      .descendant-selector a {
-        color: red;
-        font-size: 16px;
-        background-color: white;
-        padding: 5px;
-        border-radius: 10px;
-        margin-bottom: 30px;
 
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <title>Week 2</title>
+  <style>
+    /* Descendant selector */
+    .descendant-selector {
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
 
-  <!-- Descendant selector -->
-  <div class="descendant-selector">
-    <a href="https://google.com">Go to google</a>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolore
-      repudiandae tempora eligendi nesciunt autem veritatis ipsum qui velit
-      quaerat, iusto voluptatum repellat aliquam, obcaecati enim. Repellendus
-      quidem a laborum.
-    </p>
-    <a href="https://decagonhq.com">Go to decagon</a>
+    .descendant-selector a {
+      color: red;
+      font-size: 16px;
+      background-color: white;
+      padding: 5px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+
+    }
+
+    .wrapper>.p-tag {
+      background-color: coral;
+      display: inline;
+      color: white;
+      border-radius: 5px;
+      font-size: 13px;
+      /* padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 20px */
+      padding: 5px 20px;
+      margin: 10px;
+      border: 1px solid black;
+
+    }
+  </style>
+</head>
+
+<!-- Descendant selector -->
+<div class="descendant-selector">
+  <a href="https://google.com">Go to google</a>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolore
+    repudiandae tempora eligendi nesciunt autem veritatis ipsum qui velit
+    quaerat, iusto voluptatum repellat aliquam, obcaecati enim. Repellendus
+    quidem a laborum.
+  </p>
+  <a href="https://decagonhq.com">Go to decagon</a>
+</div>
+
+<div class="wrapper">
+  <p class="p-tag">Button 1</p>
+  <p class="p-tag">button 2</p>
+  <p>button 3</p>
+  <div style="margin-top:10px">
+    <div>
+      <p>Button 1</p>
+      <p>button 2</p>
+      <p>button 3</p>
+    </div>
+
   </div>
+  <table>
+
+  </table>
+</div>
 
 </html>

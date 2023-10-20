@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Box model</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        /* div {
+            background-color: aqua;
+            display: block;
+            border: 10px solid red;
+            margin: 20px 50px;
+            padding: 20px;
+            font-size: 16px;
+        }
+
+        .first {
+            font-size: 16px;
+        }
+
+        .second {
+            font-size: 2em;
+        }
+
+        .third {
+            font-size: 2rem; */
+        /* } */
+        .container {
+            width:100%;
+            background-color: chocolate;
+            height: 80vh;
+            padding: 20px;
+        }
+        .children {
+            background-color: aqua;
+            width: 50%;
+            margin: 20px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .children:hover{
+            font-size: 20px;;
+        }
+    </style>
+
+<body>
+    <!-- <div class="first">CSS box model</div>
+    <div class="second">CSS box model</div>
+    <div class="third">CSS box model</div> -->
+    <div class="container">
+        <div class="children">CSS box model</div>
+        <div class="children">CSS box model</div>
+        <div class="children">CSS box model</div>
+    </div>
+</body>
+</head>
+
+</html>

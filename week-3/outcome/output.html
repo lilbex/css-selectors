@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grid</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Lexend Deca";
+      }
+      body {
+        background-color: #f2f2f2;
+        width: 100%;
+      }
+      h2 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        text-transform: uppercase;
+        color: #f2f2f2;
+      }
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        color: #ffffff;
+      }
+
+      .wrapper {
+        background-color: #e28625;
+        border-radius: 10px;
+        height: 90vh;
+        width: 80%;
+        margin: 0 auto;
+        margin-top:30px;
+        
+      }
+      .overlay {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 100%;
+        width: 100%;
+      }
+      .left-most {
+        border-radius: 8px;
+        background-color: #e28625;
+        border-radius: 8px;
+      }
+      .content-container {
+        display: flex;
+        height: 90%;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 40px;
+      }
+      .middle {
+        background-color: #006971;
+        border-radius: 8px;
+        height: 100%;
+      }
+      .right-most {
+        background-color: #004140;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        height: 100%;
+      }
+      button {
+        background-color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 20px;
+        height: 50px;
+        margin: 20px;
+        width: 200px;
+        cursor: grab;
+      }
+      .first-btn{
+        color: #e28625;
+      }
+      .middle-btn{
+        color:#006971;
+      }
+      .last-btn{
+        color:black;
+      }
+      button:hover {
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+      }
+      img {
+        height: 100px;
+        margin: 20px;
+        width: 100px;
+      }
+      @media only screen and (max-width: 768px) {
+        .overlay {
+          grid-template-columns: 1fr;
+          border-radius: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="overlay">
+        <div class="left-most">
+          <div class="content-container">
+            <img src="sedan.svg" alt="seda" />
+            <h2>sedans</h2>
+            <p>
+              Choose a sedan for its affordability and excellent fuel economy.
+              Ideal for cruising in the city or on your next road trip.
+            </p>
+            <button class="first-btn">Learn More</button>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="content-container">
+            <img src="suvs.svg" alt="suvs" />
+            <h2>suvs</h2>
+            <p>
+              Take an SUV for its spacious interior, power, and versatility.
+              Perfect for your next family vacation and off-road adventures.
+            </p>
+            <button class="middle-btn">Learn More</button>
+          </div>
+        </div>
+        <div class="right-most">
+          <div class="content-container">
+            <img src="luxury.svg" alt="luxury" />
+            <h2>luxury</h2>
+            <p>
+              Cruise in the best car brands without the bloated prices. Enjoy
+              the enhanced comfort of a luxury rental and arrive in style.
+            </p>
+            <button class="last-btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
